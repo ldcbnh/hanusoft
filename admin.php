@@ -1,13 +1,10 @@
-<?php 
-	$title = 'Admin panel';
-	include 'header.php';
-	if(isset($SESSION['admin']) && $SESSION['admin']==true){
+<?php
+$title = 'Admin panel';
+include 'header.php';
+if (isset($SESSION['admin']) && $SESSION['admin'] == true) {
 
-
-
-
-	}else{
-		echo '<center>
+} else {
+	echo '<center>
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="panel panel-info">
 					  <div class="panel-heading">
@@ -20,10 +17,7 @@
 				</div>
 			</center>
 		';
-	}
- ?>
+}
 
-
- <?php 
- include 'footer.php';
-  ?>
+include 'footer.php';
+?>
