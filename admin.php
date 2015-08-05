@@ -16,7 +16,7 @@ if (isset($SESSION['admin']) && $SESSION['admin'] == true) {
 				</div>
 			</div>
 		</center>
-		';
+	';
 }
 
 include 'footer.php';
