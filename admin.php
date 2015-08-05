@@ -21,3 +21,4 @@ if (isset($SESSION['admin']) && $SESSION['admin'] == true) {
 
 include 'footer.php';
 ?>
+
