@@ -1,13 +1,12 @@
-<?php 
-	include 'db/checklogin.php';
+<?php
+include 'db/checklogin.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 	<meta charset="UTF-8">
 	<link rel="shortcut icon" href="img/hanusoft.gif">
-	<title><?php echo $title ?></title>
+	<title><?php echo $title?></title>
 	<!-- Latest compiled and minified CSS & JS -->
 	<link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<script src="//code.jquery.com/jquery.js"></script>
@@ -16,13 +15,12 @@
 	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 	<style type="text/css" media="screen">
-	  
+
 		@media (min-width: 979px) {
 		  	ul.nav li.dropdown:hover > ul.dropdown-menu {
 		    	display: block;
 		  }
 		}
-
 		body {
 		  padding-top: 90px;
 		}
@@ -98,25 +96,25 @@
 			</ul>
 
 			<ul class="nav navbar-nav navbar-right">
-				<?php 
-					if(isset($_SESSION['login']) && $_SESSION['login'] = true){
-						$username = $_SESSION['myusername'];
-						echo '
+				<?php
+if (isset($_SESSION['login']) && $_SESSION['login'] = true) {
+	$username = $_SESSION['myusername'];
+	echo '
 							<li>
-								<a href="profile.php" role="button"><span class="fa fa-user" aria-hidden="true"></span> '.$username.' </a>
+								<a href="profile.php" role="button"><span class="fa fa-user" aria-hidden="true"></span> ' . $username . ' </a>
 							</li>
 							<li>
 								<a href="/db/logout.php"> <span class="fa fa-sign-out" aria-hidden="true"></span> Logout</a>
 							</li>
 						';
-					}else{
-						echo '
+} else {
+	echo '
 							<li>
 								<a data-toggle="modal" href="#modal-login"><span class="fa fa-sign-in" aria-hidden="true"></span> Login</a>
 							</li>
 						';
-					}
-				?>
+}
+?>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</div>
@@ -129,9 +127,9 @@
 					<div class="modal-header form-group float-label-control">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<h4 class="modal-title">Member login</h4>
-					</div>	
+					</div>
 				</div>
-					
+
 				<form action="db/checklogin.php" method="POST" role="form">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-group float-label-control">
 						<input type="text" class="form-control" required="required" name="inputUsername" id="inputUsername" placeholder="Username">
